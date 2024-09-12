@@ -1,10 +1,20 @@
-import React from 'react'
+import { BrowseRouter, Routes, Route, Link } from "react-router-dom"
+
+//pages
+import Home from "./pages/Home/Home"
+import About from "./pages/About/About"
+
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <BrowseRouter>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="about" element={<About/>} />
+        </Routes>
+      </main>
+    </BrowseRouter>
   )
 }
 
